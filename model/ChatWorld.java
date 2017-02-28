@@ -1,4 +1,6 @@
-package dnr.model;
+package model;
+
+import java.util.HashMap;
 
 public class ChatWorld {
     protected HashMap<String, User> users;

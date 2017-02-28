@@ -1,4 +1,4 @@
-package dnr.model;
+package model;
 
 public class Position {
 

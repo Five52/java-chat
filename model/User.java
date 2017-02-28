@@ -1,6 +1,6 @@
-package dnr.model;
+package model;
 
-import dnr.util.event.ObservableModel;
+import util.event.ObservableModel;
 
 public class User extends ObservableModel {
 
@@ -17,7 +17,7 @@ public class User extends ObservableModel {
     }
 
     public void setName(String name) {
-        this.name = name
+        this.name = name;
     }
 
     public Position getPosition() {

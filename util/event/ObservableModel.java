@@ -1,4 +1,4 @@
-package dnr.model;
+package util.event;
 
 import java.util.ArrayList;
 
@@ -24,7 +24,7 @@ public abstract class ObservableModel {
     }
 
     protected void triggerChange() {
-        for (int i = 0; int < listeners.size(); i++ {
+        for (int i = 0; i < listeners.size(); i++) {
             listeners.get(i).modelChanged(this);
         }
     }
