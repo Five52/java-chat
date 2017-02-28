@@ -1,6 +1,8 @@
 package dnr.model;
 
-public class User {
+import dnr.util.event.ObservableModel;
+
+public class User extends ObservableModel {
 
     protected String name;
     protected Position position;
