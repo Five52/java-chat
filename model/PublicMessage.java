@@ -2,6 +2,9 @@ package model;
 
 import java.util.ArrayList;
 
+/**
+ * @author Thomas Fortin
+ */
 public class PublicMessage extends Message {
     private ArrayList<User> toUsers;
 

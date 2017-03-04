@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * @author Thomas Fortin
+ */
 public class PrivateMessage extends Message {
     private User toUser;
 

@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * @author Thomas Fortin
+ */
 public abstract class Message {
     private User fromUser;
     private String content;
