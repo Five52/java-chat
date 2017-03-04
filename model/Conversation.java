@@ -19,4 +19,14 @@ public class Conversation {
     public ArrayList<Message> getMessages() {
         return messages;
     }
+
+    public String toString() {
+        String str = "";
+
+        for (Message message : messages) {
+            str += message.getFromUser() + " :" + message.getContent() + "\n";
+        }
+
+        return str;
+    }
 }
