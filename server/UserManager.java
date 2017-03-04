@@ -24,7 +24,7 @@ class UserManager {
 
     /**
      * Add an user on the list
-     * @param Connexion connexion The clien connexion
+     * @param connexion The clien connexion
      * @return True if the user is not already registred
      *              (checked by its username)
      */
@@ -35,5 +35,18 @@ class UserManager {
 
         connexions.add(connexion);
         return true;
+    }
+
+    /**
+     * Send a message to clients
+     * @param sender The sender
+     * @param message The message
+     */
+    public void broadcast(Connexion sender, Message message) {
+        for (Connexion connexion : this.connexions) {
+            if (!connexion.equals(sender)) {
+                connexion.send(message);
+            }
+        }
     }
 }
