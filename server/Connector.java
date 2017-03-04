@@ -3,13 +3,14 @@ package server;
 import java.net.ServerSocket;
 import java.io.IOException;
 
+
 /**
  * @author Yoann Boyer
  */
-class Listener implements Runnable {
+class Connector implements Runnable {
     ServerSocket socket;
 
-    public Listener(ServerSocket socket) {
+    public Connector(ServerSocket socket) {
         this.socket = socket;
     }
 
@@ -18,10 +19,11 @@ class Listener implements Runnable {
         try {
             while (true) {
                 System.out.println("Waiting clients..");
-                socket.accept();
+
+                new Thread(new Connexion(this.socket.accept())).start();
             }
         } catch (IOException e) {
-            System.out.println("Error handling client connection: " + e.getMessage());
+            System.out.println("Error on client connection: " + e.getMessage());
         }
     }
 }

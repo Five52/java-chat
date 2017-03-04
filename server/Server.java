@@ -3,6 +3,7 @@ package server;
 import java.net.ServerSocket;
 import java.io.IOException;
 
+
 /**
  * @author Yoann Boyer
  */
@@ -14,7 +15,7 @@ class Server {
             ServerSocket serverSocket = new ServerSocket(PORT);
             System.out.println("Server started on port " + PORT);
 
-            new Thread(new Listener(serverSocket)).start();
+            new Thread(new Connector(serverSocket)).start();
         } catch (IOException e) {
             System.out.println("Can't listen on port " + PORT + ": " + e.getMessage());
         }
